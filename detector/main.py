@@ -60,7 +60,7 @@ def main():
     args = parser.parse_args()
     #config_training = import_module(args.config)
     
-    config_training = config_training.config
+    #config_training = "/content/DeepLung/config_training.py"
     # from config_training import config as config_training
     torch.manual_seed(0)
     torch.cuda.set_device(0)
