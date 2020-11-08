@@ -16,7 +16,7 @@ from torch.backends import cudnn
 from torch.utils.data import DataLoader
 from torch import optim
 from torch.autograd import Variable
-# from config_training import config as config_training
+from config_training import config as config_training
 
 from layers import acc
 
