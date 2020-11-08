@@ -16,7 +16,7 @@ from torch.backends import cudnn
 from torch.utils.data import DataLoader
 from torch import optim
 from torch.autograd import Variable
-from config_training import config as config_training
+#from config_training import config as config_training
 
 from layers import acc
 
@@ -59,7 +59,7 @@ def main():
     global args
     args = parser.parse_args()
     config_training = import_module(args.config)
-    config_training = config_training.config
+    config_training = config
     # from config_training import config as config_training
     torch.manual_seed(0)
     torch.cuda.set_device(0)
