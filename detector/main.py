@@ -64,7 +64,7 @@ def main():
     torch.manual_seed(0)
     torch.cuda.set_device(0)
 
-    model = import_module(args.model)
+    model = import_module(/content/DeepLung/detector/res18.py)
     config, net, loss, get_pbb = model.get_model()
     start_epoch = args.start_epoch
     save_dir = args.save_dir
