@@ -105,9 +105,9 @@ def main():
     valdatadir = config_training['val_preprocess_result_path']
     testdatadir = config_training['test_preprocess_result_path']
     trainfilelist = []
-    print config_training['train_data_path']
+    print (config_training['train_data_path'])
     for folder in config_training['train_data_path']:
-        print folder
+        print (folder)
         for f in os.listdir(folder):
             if f.endswith('.mhd') and f[:-4] not in config_training['black_list']:
                 trainfilelist.append(folder.split('/')[-2]+'/'+f[:-4])
@@ -149,7 +149,7 @@ def main():
         return
     #net = DataParallel(net)
     import data
-    print len(trainfilelist)
+    print (len(trainfilelist))
     dataset = data.DataBowl3Detector(
         traindatadir,
         trainfilelist,
@@ -339,7 +339,7 @@ def test(data_loader, net, get_pbb, save_dir, config):
             feature = split_comber.combine(feature,sidelen)[...,0]
 
         thresh = args.testthresh # -8 #-3
-        print 'pbb thresh', thresh
+        print ('pbb thresh', thresh)
         pbb,mask = get_pbb(output,thresh,ismask=True)
         if isfeat:
             feature_selected = feature[mask[0],mask[1],mask[2]]
