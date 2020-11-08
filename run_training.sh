@@ -2,7 +2,7 @@
 set -e
 
 # python prepare.py
-cd detector
+cd $detector
 maxeps=150
 f=9
 CUDA_VISIBLE_DEVICES=2,3,4,5,6,7 python main.py --model res18 -b 64 --resume 064.ckpt --save-dir res18/retrft96$f/ --epochs $maxeps --config config_training$f
