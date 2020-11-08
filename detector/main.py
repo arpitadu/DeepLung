@@ -9,7 +9,7 @@ from utils import *
 import sys
 sys.path.append('../')
 from split_combine import SplitComb
-from res18 import get_model()
+from res18 import get_model
 import torch
 from torch.nn import DataParallel
 from torch.backends import cudnn
