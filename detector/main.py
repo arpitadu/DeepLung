@@ -58,9 +58,9 @@ parser.add_argument('--n_test', default=4, type=int, metavar='N',
 def main():
     global args
     args = parser.parse_args()
-    #config_training = import_module(args.config)
-    global config
-    config_training = config
+    config_training = import_module(args.config)
+    
+    config_training = import_module(args.config)
     # from config_training import config as config_training
     torch.manual_seed(0)
     torch.cuda.set_device(0)
