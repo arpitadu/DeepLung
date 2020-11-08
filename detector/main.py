@@ -9,7 +9,7 @@ from utils import *
 import sys
 sys.path.append('../')
 from split_combine import SplitComb
-
+from res18 import get_model()
 import torch
 from torch.nn import DataParallel
 from torch.backends import cudnn
@@ -64,8 +64,8 @@ def main():
     torch.manual_seed(0)
     torch.cuda.set_device(0)
 
-    model = import_module(/content/DeepLung/detector/res18.py)
-    config, net, loss, get_pbb = model.get_model()
+    #model = import_module(/content/DeepLung/detector/res18.py)
+    config, net, loss, get_pbb = get_model()
     start_epoch = args.start_epoch
     save_dir = args.save_dir
     
