@@ -36,7 +36,7 @@ class DataBowl3Detector(Dataset):
         
         labels = []
         
-        print len(idcs)
+        print (len(idcs))
         for idx in idcs:
             # print data_dir, idx
             l = np.load(data_dir+idx+'_label.npy')
@@ -274,7 +274,7 @@ class LabelMapping(object):
         output_size = []
         for i in range(3):
             if input_size[i] % stride != 0:
-                print filename
+                print (filename)
             # assert(input_size[i] % stride == 0) 
             output_size.append(input_size[i] / stride)
         
