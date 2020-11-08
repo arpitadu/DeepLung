@@ -59,6 +59,7 @@ def main():
     global args
     args = parser.parse_args()
     #config_training = import_module(args.config)
+    global config
     config_training = config
     # from config_training import config as config_training
     torch.manual_seed(0)
