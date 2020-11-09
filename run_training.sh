@@ -11,11 +11,11 @@ do
     echo "process $i epoch"
 	
 	if [ $i -lt 10 ]; then
-	    CUDA_VISIBLE_DEVICES=2,3,4,5,6,7 python /content/DeepLung/detector/main.py --model res18 -b 32 --resume results/res18/retrft96$f/00$i.ckpt --test 1 --save-dir res18/retrft96$f/ --config config_training$f
+	    CUDA_VISIBLE_DEVICES=0 python /content/DeepLung/detector/main.py --model res18 -b 32 --resume results/res18/retrft96$f/00$i.ckpt --test 1 --save-dir res18/retrft96$f/ --config config_training$f
 	elif [ $i -lt 100 ]; then 
-	    CUDA_VISIBLE_DEVICES=2,3,4,5,6,7 python /content/DeepLung/detector/main.py --model res18 -b 32 --resume results/res18/retrft96$f/0$i.ckpt --test 1 --save-dir res18/retrft96$f/ --config config_training$f
+	    CUDA_VISIBLE_DEVICES=0 python /content/DeepLung/detector/main.py --model res18 -b 32 --resume results/res18/retrft96$f/0$i.ckpt --test 1 --save-dir res18/retrft96$f/ --config config_training$f
 	elif [ $i -lt 1000 ]; then
-	    CUDA_VISIBLE_DEVICES=2,3,4,5,6,7 python /content/DeepLung/detector/main.py --model res18 -b 32 --resume results/res18/retrft96$f/$i.ckpt --test 1 --save-dir res18/retrft96$f/ --config config_training$f
+	    CUDA_VISIBLE_DEVICES=0 python /content/DeepLung/detector/main.py --model res18 -b 32 --resume results/res18/retrft96$f/$i.ckpt --test 1 --save-dir res18/retrft96$f/ --config config_training$f
 	else
 	    echo "Unhandled case"
     fi
